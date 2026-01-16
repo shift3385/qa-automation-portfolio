@@ -1,0 +1,13 @@
+{
+  "name": "qa-automation-portfolio",
+  "version": "1.0.0",
+  "description": "Professional QA Automation portfolio showcasing full-stack testing strategies (UI, API) for E-Commerce systems. Built with Playwright, Cypress, and Selenium, featuring POM architecture and CI/CD integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
