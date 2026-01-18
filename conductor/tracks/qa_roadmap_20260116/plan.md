@@ -7,7 +7,7 @@ Establishing the tools and the framework skeleton.
     - [ ] Initialize Node.js project and install Playwright.
     - [ ] Configure TypeScript and ESLint according to style guides.
     - [ ] Create the directory structure for POM (pages, tests, utils, data).
-- [ ] Task: Theoretical Foundation - Test Design
+- [x] Task: Theoretical Foundation - Test Design 4b975b1
     - [ ] Study and summarize ISTQB Test Design Techniques (Equivalence Partitioning, BVA).
     - [ ] Apply these techniques to design test cases for the Login flow.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Environment & Architecture Setup' (Protocol in workflow.md)
