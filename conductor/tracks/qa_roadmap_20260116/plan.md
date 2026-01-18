@@ -3,7 +3,7 @@
 ## Phase 1: Environment & Architecture Setup
 Establishing the tools and the framework skeleton.
 
-- [ ] Task: Project Scaffolding
+- [x] Task: Project Scaffolding 68dc8a0
     - [ ] Initialize Node.js project and install Playwright.
     - [ ] Configure TypeScript and ESLint according to style guides.
     - [ ] Create the directory structure for POM (pages, tests, utils, data).
