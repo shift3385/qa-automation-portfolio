@@ -1,6 +1,6 @@
 # Implementation Plan: Phase 1 - Foundation & Playwright Core
 
-## Phase 1: Environment & Architecture Setup
+## Phase 1: Environment & Architecture Setup [checkpoint: 2f244c5]
 Establishing the tools and the framework skeleton.
 
 - [x] Task: Project Scaffolding 68dc8a0
