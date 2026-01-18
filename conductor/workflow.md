@@ -115,11 +115,16 @@ All tasks follow a strict lifecycle:
     -   After presenting the detailed plan, ask the user for confirmation: "**Does this meet your expectations? Please confirm with yes or provide feedback on what needs to be changed.**"
     -   **PAUSE** and await the user's response. Do not proceed without an explicit yes or confirmation.
 
-6.  **Create Checkpoint Commit:**
-    -   Stage all changes. If no changes occurred in this step, proceed with an empty commit.
+6.  **Generate Learning Log:**
+    -   Create a new markdown file in `learning_log/` named `phase_XX_<name>.md`.
+    -   Summarize the technical achievements, key concepts learned (e.g., specific commands, patterns like POM), and useful snippets.
+    -   Confirm with the user that the log captures the key takeaways.
+
+7.  **Create Checkpoint Commit:**
+    -   Stage all changes (including the new Learning Log). If no changes occurred in this step, proceed with an empty commit.
     -   Perform the commit with a clear and concise message (e.g., `conductor(checkpoint): Checkpoint end of Phase X`).
 
-7.  **Attach Auditable Verification Report using Git Notes:**
+8.  **Attach Auditable Verification Report using Git Notes:**
     -   **Step 7.1: Draft Note Content:** Create a detailed verification report including the automated test command, the manual verification steps, and the user's confirmation.
     -   **Step 7.2: Attach Note:** Use the `git notes` command and the full commit hash from the previous step to attach the full report to the checkpoint commit.
 
