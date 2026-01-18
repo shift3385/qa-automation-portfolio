@@ -4,10 +4,19 @@
   "description": "Professional QA Automation portfolio showcasing full-stack testing strategies (UI, API) for E-Commerce systems. Built with Playwright, Cypress, and Selenium, featuring POM architecture and CI/CD integration.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx playwright test",
+    "lint": "npx eslint ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.9",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3"
+  }
 }
