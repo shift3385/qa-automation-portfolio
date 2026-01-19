@@ -15,7 +15,7 @@ Establishing the tools and the framework skeleton.
 ## Phase 2: Core Flow Implementation
 Building the first automated scenarios.
 
-- [ ] Task: Authentication Flow (POM)
+- [x] Task: Authentication Flow (POM) dabb72e
     - [ ] Write tests for the Login functionality.
     - [ ] Implement Page Objects for Login page.
     - [ ] Implement data-driven approach for different user types (Valid, Invalid, Locked).
