@@ -5,7 +5,14 @@
 ## 1. Conceptos Clave de esta Etapa
 
 ### Page Object Model (POM)
-...
+Es el patrón de diseño más importante en la automatización de UI. 
+*   **¿Qué es?**: Creamos una "clase" (un plano) que representa una página web. Esta clase contiene los selectores (dónde están los botones) y los métodos (qué acciones se pueden hacer).
+*   **Beneficio**: Si el desarrollador cambia el ID de un botón, solo lo corregimos en la clase `LoginPage`, y automáticamente todas las pruebas que usan ese botón vuelven a funcionar. No hay que buscar y reemplazar en 50 archivos.
+
+### Data-Driven Testing (Pruebas Basadas en Datos)
+Separamos los **datos** de la **lógica**.
+*   **¿Qué hicimos?**: Creamos un archivo `loginData.json`.
+*   **Beneficio**: Si queremos probar un nuevo usuario, solo lo añadimos al JSON. No tocamos el código de la prueba. Esto hace que las pruebas sean mucho más limpias y fáciles de leer.
 
 ### Monitoreo de Desempeño (Performance Annotations)
 Aprendimos a diferenciar entre una **Prueba Funcional** y un **Monitoreo de UX**.
@@ -14,7 +21,10 @@ Aprendimos a diferenciar entre una **Prueba Funcional** y un **Monitoreo de UX**
 *   **Herramienta**: Usamos `Date.now()` para medir y `test.info().annotations.push()` para registrar la alerta sin romper el flujo.
 
 ### Ciclo TDD (Red-Green-Refactor)
-...
+Hoy lo vivimos paso a paso:
+1.  **Red (Rojo):** Escribimos la prueba de login y falló porque la clase `LoginPage` no existía.
+2.  **Green (Verde):** Creamos la clase y corregimos los errores (como el de `simplewall` y el de `{ page }`) hasta que todo pasó en verde.
+3.  **Refactor (Refactorizar):** Una vez que todo funcionaba, movimos los datos al JSON para mejorar la estructura.
 
 ## 2. Lecciones Aprendidas en el Debugging
 *   **Entorno:** Los firewalls (como Simplewall) pueden bloquear a Playwright. Siempre verificar la conexión si hay errores `ERR_NETWORK_ACCESS_DENIED`.
