@@ -44,3 +44,12 @@ Podemos importar datos directamente como si fueran objetos:
 import loginData from '../data/loginData.json';
 // Uso: loginData.validUser.username
 ```
+
+## 4. Diferencias de Ejecución (Comandos)
+
+Es vital entender la diferencia entre ejecución general y depuración específica.
+
+| Comando | Descripción | Visibilidad | Uso |
+| :--- | :--- | :--- | :--- |
+| `npm test tests/login.spec.ts` | Ejecuta la prueba en **todos** los navegadores configurados (Chromium, Firefox, WebKit) en paralelo. | **Headless** (Invisible/Fondo) | Validación general rápida (CI/CD). |
+| `npx playwright test tests/login.spec.ts --project=firefox --headed` | Ejecuta la prueba **solo** en el navegador especificado (Firefox). | **Headed** (Visible) | Depuración de errores específicos o validación visual. |
