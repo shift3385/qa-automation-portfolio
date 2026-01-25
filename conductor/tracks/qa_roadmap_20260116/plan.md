@@ -19,7 +19,7 @@ Building the first automated scenarios.
     - [ ] Write tests for the Login functionality.
     - [ ] Implement Page Objects for Login page.
     - [ ] Implement data-driven approach for different user types (Valid, Invalid, Locked).
-- [ ] Task: Product Search & Navigation
+- [~] Task: Product Search & Navigation
     - [ ] Write tests for searching and filtering products.
     - [ ] Implement Page Objects for Search and Catalog.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Core Flow Implementation' (Protocol in workflow.md)
@@ -34,3 +34,18 @@ Connecting the framework to the ecosystem.
     - [ ] Document framework metrics (Execution time, pass/fail rate).
     - [ ] Review Test Management theory (Defect lifecycle).
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Integration & Reporting' (Protocol in workflow.md)
+
+## Phase 4: Market Alignment (API & Data) [New!]
+Expanding skills to match current job offers (EverPass, dLocal, Descartes).
+
+- [ ] Task: API Testing Foundation
+    - [ ] Study REST vs GraphQL principles.
+    - [ ] Implement API tests using Playwright's APIRequestContext (replacing Postman for automation).
+    - [ ] Validate Backend-Frontend integration.
+- [ ] Task: Database Validation (SQL)
+    - [ ] Setup a local mock database (SQLite).
+    - [ ] Write SQL queries to validate test data creation.
+    - [ ] Implement a helper to check DB state from Playwright tests.
+- [ ] Task: CI/CD & Containerization
+    - [ ] Dockerize the testing environment (EverPass/Azumo requirement).
+    - [ ] Optimize GitHub Actions for parallel execution.

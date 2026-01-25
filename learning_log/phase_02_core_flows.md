@@ -53,3 +53,75 @@ Es vital entender la diferencia entre ejecución general y depuración específi
 | :--- | :--- | :--- | :--- |
 | `npm test tests/login.spec.ts` | Ejecuta la prueba en **todos** los navegadores configurados (Chromium, Firefox, WebKit) en paralelo. | **Headless** (Invisible/Fondo) | Validación general rápida (CI/CD). |
 | `npx playwright test tests/login.spec.ts --project=firefox --headed` | Ejecuta la prueba **solo** en el navegador especificado (Firefox). | **Headed** (Visible) | Depuración de errores específicos o validación visual. |
+
+---
+
+**Fecha:** 19 de Enero, 2026
+**Estado:** Funcionalidad de Inventario (Búsqueda, Filtrado, Carrito) y **Checkout E2E** Completadas.
+
+## 5. Profundización Técnica (Dudas y Soluciones)
+
+### El Dilema del Naming: `goto()` vs `navigateToX()`
+Surgió una duda existencial importante: ¿Por qué llamamos `goto()` al método de navegación dentro de `LoginPage`? ¿No choca con el `page.goto()` nativo?
+*   **Encapsulamiento:** El objetivo del Page Object es ocultar la URL real (`/inventory.html`). Si la URL cambia mañana, solo editamos este archivo, no los 50 tests.
+*   **Convención:** Aunque `this.page.goto()` (nativo) y `this.goto()` (nuestro) se llaman igual, viven en objetos diferentes.
+    *   `page` es el controlador del navegador.
+    *   `inventoryPage` es nuestra abstracción de alto nivel.
+*   **Conclusión:** Ambos son válidos, pero mantener `goto()` es estándar en la industria para indicar "Ir a la página por defecto de este objeto".
+
+### Lógica de Selección: ¿Cómo clickear el botón correcto?
+En el inventario hay muchos botones "Add to cart". Si hacemos `page.locator('button').click()`, Playwright fallará porque hay muchos.
+**Estrategia "Scope" (Alcance):**
+1.  Primero buscamos la **tarjeta** del producto específico por su texto.
+2.  Dentro de ESE contenedor, buscamos el botón.
+```typescript
+// Malo (Ambiguo)
+await page.locator('button').click();
+
+// Bueno (Preciso)
+const productContainer = this.page.locator('.inventory_item', { hasText: 'Backpack' });
+await productContainer.locator('button').click(); // Solo busca el botón DENTRO de la tarjeta de la mochila
+```
+
+### Estrategia de Pruebas: ¿Por qué probamos esto?
+No probamos por probar. Cada test tiene una justificación de negocio:
+
+1.  **Visualización (Sanity Check):** `isInventoryListVisible`
+    *   *Por qué:* Si la lista no carga, nada más importa. Es la prueba "semáforo".
+2.  **Interacción (Add to Cart):**
+    *   *Por qué:* Es el flujo crítico de ingresos. Probamos que el contador del carrito (`.shopping_cart_badge`) cambie de 0 a 1. No necesitamos ir al carrito todavía, el feedback visual es suficiente para esta etapa unitaria.
+3.  **Lógica de Negocio (Ordenamiento):**
+    *   *Por qué:* Un usuario que ordena "Menor a Mayor" y ve un precio alto primero, desconfía del sitio.
+    *   *Cómo:* Extraemos todos los precios como texto (`$29.99`), quitamos el signo `$` y los convertimos a números para verificar matemáticamente que `Precio A <= Precio B`.
+    *   *Z a A:* Validamos comparando strings directos (`names[i] >= names[i+1]`), aprovechando que Javascript usa el valor ASCII/Unicode para comparaciones "mayor/menor que" en texto.
+
+4.  **Estado de UI (Botón Remove):**
+    *   *Por qué:* Validar que el botón cambie de texto ("Add to cart" -> "Remove") confirma que la aplicación reaccionó a la acción del usuario.
+    *   *Cómo:* Buscamos el botón específico dentro del contenedor del producto y validamos su visibilidad.
+
+## 6. La Joya de la Corona: El Test End-to-End (E2E)
+
+Hoy hemos creado un test (`checkout.spec.ts`) que simula el "Happy Path" de un usuario real, desde el login hasta la confirmación de la compra. Este es el test más valioso para el negocio.
+
+### Anatomía del Test E2E:
+
+**1. Orquestación con POM:** El test no contiene ni un solo selector (`page.locator`). Es limpio y legible porque delega todo el trabajo sucio a los Page Objects.
+   *   `loginPage.login(...)`
+   *   `inventoryPage.addItemToCart(...)`
+   *   `cartPage.proceedToCheckout(...)`
+   *   `checkoutPage.fillInformation(...)`
+
+**2. Aserciones de Trazabilidad:** Cada vez que el robot "cambia de página", hacemos una aserción de URL. Esto garantiza que estamos en el paso correcto del flujo.
+   ```typescript
+   await inventoryPage.goToCart();
+   await expect(page).toHaveURL(/cart.html/); // ¡Estoy donde debería estar!
+   ```
+
+**3. Valor de Negocio:** Este test responde a la pregunta más importante: **"¿Pueden nuestros usuarios comprarnos dinero ahora mismo?"**. Si este test falla, es una alerta roja crítica que indica una pérdida directa de ingresos.
+
+**4. Aserción Final:** La última línea es la más importante. Verifica que, tras todo el viaje, el usuario vea el mensaje de éxito.
+   ```typescript
+   const successMsg = await checkoutPage.getOrderSuccessMessage();
+   expect(successMsg).toBe('Thank you for your order!');
+   ```
+Este test es el resultado final de toda la arquitectura POM que hemos construido. Cada Page Object es un bloque de Lego, y el test E2E es la construcción final.

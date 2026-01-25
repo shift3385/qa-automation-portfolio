@@ -8,8 +8,7 @@
 
 3. Arquitectura del Proyecto (Page Object Model)
 * Qué hicimos: Creamos las carpetas vacías pages, utils, y data.
-* Objetivo: Preparar la estructura para el patrón de diseño "Page Object Model" (POM). Esto separa la lógica de la prueba de la estructura de la página web, haciendo que las pruebas sean mucho más fáciles
-    de arreglar si la web cambia.
+* Objetivo: Preparar la estructura para el patrón de diseño "Page Object Model" (POM). Esto separa la lógica de la prueba de la estructura de la página web, haciendo que las pruebas sean mucho más fáciles de arreglar si la web cambia.
 
 4. Verificación del Sistema
 * Qué hicimos: Creamos una prueba unitaria básica (framework basic check) que simplemente verifica que 1 es igual a 1.

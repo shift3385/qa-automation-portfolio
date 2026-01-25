@@ -19,7 +19,7 @@ export class LoginPage {
     const startTime = Date.now();
     
     // Mantenemos el timeout duro de 60s para evitar fallos de red en la prueba funcional
-    await this.page.goto('https://www.saucedemo.com/', { timeout: 60000 });
+    await this.page.goto('https://www.saucedemo.com/', { timeout: 90000 });
 
     const duration = Date.now() - startTime;
     const idealTime = 3000;
