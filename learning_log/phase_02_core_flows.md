@@ -125,3 +125,28 @@ Hoy hemos creado un test (`checkout.spec.ts`) que simula el "Happy Path" de un u
    expect(successMsg).toBe('Thank you for your order!');
    ```
 Este test es el resultado final de toda la arquitectura POM que hemos construido. Cada Page Object es un bloque de Lego, y el test E2E es la construcción final.
+
+---
+
+**Fecha:** 25 de Enero, 2026
+**Estado:** Fase 2 Completada. Alineación de Mercado Realizada.
+
+## 7. Evolución del Framework: El toque Senior
+
+Hoy cerramos la Fase 2 con una mentalidad de **Ingeniero**, no de aprendiz.
+
+### Alineación con el Mercado Real
+Analizamos 7 ofertas laborales reales (dLocal, Scanntech, Azumo, etc.) y descubrimos que no basta con Playwright.
+*   **Lección:** Un QA Senior debe ser políglota (TS/Python) y entender de infraestructura (Docker/CI-CD).
+*   **Acción:** Re-estructuramos el Roadmap para incluir **GraphQL**, **Docker** y un puente hacia **Python**.
+
+### Robustez en Selectores
+Aprendimos que el orden de preferencia en selectores es vital para la estabilidad (flakiness):
+1.  `data-test` (Inamovible por diseño).
+2.  `id` (Único pero a veces dinámico).
+3.  `class` (Último recurso, propenso a cambios visuales).
+*   **Refactor:** Ajustamos la `CheckoutCompletePage` para usar `[data-test="complete-header"]`, garantizando que el test no se rompa si el desarrollador cambia el diseño del contenedor.
+
+### La importancia de los "Getters" en POM
+Entendimos que la página debe ser "tonta" (solo entrega datos) y el test debe ser "inteligente" (hace las aserciones).
+*   **Error corregido:** Intentamos validar el título dentro de la página. Lo corregimos devolviendo el `innerText()` y dejando que el `expect()` viva en el archivo `.spec.ts`. Esto hace que el código sea mucho más mantenible.
