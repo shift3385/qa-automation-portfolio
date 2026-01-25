@@ -12,7 +12,7 @@ Establishing the tools and the framework skeleton.
     - [ ] Apply these techniques to design test cases for the Login flow.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Environment & Architecture Setup' (Protocol in workflow.md)
 
-## Phase 2: Core Flow Implementation
+## Phase 2: Core Flow Implementation [checkpoint: 018cc29]
 Building the first automated scenarios.
 
 - [x] Task: Authentication Flow (POM) dabb72e
