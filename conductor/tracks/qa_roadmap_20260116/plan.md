@@ -30,13 +30,13 @@ Building the first automated scenarios.
 ## Phase 3: Integration, Reporting & Containerization
 Connecting the framework to the ecosystem.
 
-- [ ] Task: Containerization (Docker)
-    - [ ] Create `Dockerfile` and `docker-compose.yml` (Critical for EverPass/Azumo).
-    - [ ] Ensure tests run successfully inside the container.
-- [ ] Task: GitHub Actions Integration
-    - [ ] Create a `.github/workflows` file to run tests on every push.
-    - [ ] Integrate Docker execution within the pipeline.
-    - [ ] Configure artifact storage for test reports.
+- [x] Task: Containerization (Docker)
+    - [x] Create `Dockerfile` and `docker-compose.yml` (Critical for EverPass/Azumo).
+    - [x] Ensure tests run successfully inside the container.
+- [x] Task: GitHub Actions Integration
+    - [x] Create a `.github/workflows` file to run tests on every push.
+    - [x] Integrate Docker execution within the pipeline.
+    - [x] Configure artifact storage for test reports.
 - [ ] Task: Quality Metrics
     - [ ] Document framework metrics (Execution time, pass/fail rate).
     - [ ] Review Test Management theory (Defect lifecycle).

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  e2e-tests:
+    build: .
+    image: qa-automation-portfolio
+    container_name: playwright-runner
+    # Mapeamos el directorio actual (.) a /app dentro del contenedor
+    volumes:
+      - .:/app
+      - qa-automation-node-modules:/app/node_modules
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+    # Variables de entorno
+    environment:
+      - CI=true
+
+volumes:
+  qa-automation-node-modules:
+    # Comando para mantener el contenedor vivo si queremos entrar a ejecutar comandos manuales
+    # O se puede dejar el CMD del Dockerfile para correr y morir.
+    # Por ahora, dejaremos que corra los tests por defecto.

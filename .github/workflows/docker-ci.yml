@@ -1,0 +1,42 @@
+name: Dockerized Playwright Tests
+# Este workflow replica EXACTAMENTE el entorno local usando Docker Compose.
+# Garantiza que "si funciona en mi máquina, funciona en CI".
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  docker-test:
+    name: Run Tests in Docker
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      # 1. Obtenemos el código del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Construimos la imagen usando exactamente el mismo comando que en local
+      # Esto asegura que todas las dependencias (browsers, node_modules) sean las mismas.
+      - name: Build Docker Stack
+        run: docker-compose build
+
+      # 3. Ejecutamos los tests
+      # --abort-on-container-exit: Detiene todos los contenedores si uno termina.
+      # --exit-code-from e2e-tests: Hace que el paso de GitHub Actions falle si los tests fallan.
+      - name: Run Playwright Tests
+        run: docker-compose up --abort-on-container-exit --exit-code-from e2e-tests
+
+      # 4. Guardamos los reportes como artefactos
+      # Esto nos permite descargar el HTML report desde GitHub si algo falla.
+      # Usamos `if: always()` para que se guarden incluso si los tests fallan.
+      - name: Upload Test Report
+        if: always() 
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-playwright-report
+          path: playwright-report/
+          retention-days: 30

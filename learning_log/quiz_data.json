@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "category": "Setup",
+    "question": "¿Qué comando utilizamos para inicializar el proyecto Playwright de forma desatendida con TypeScript?",
+    "options": [
+      "npm init playwright@latest",
+      "npm install playwright",
+      "npm init -y playwright@latest -- --quiet --lang=TypeScript --install-deps --gha",
+      "npx create-playwright"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 2,
+    "category": "Setup",
+    "question": "En el comando de instalación, ¿qué hace la bandera '--gha'?",
+    "options": [
+      "Instala Google Home Assistant",
+      "Genera la configuración para GitHub Actions",
+      "Genera Archivos de HTML",
+      "Garantiza High Availability"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 3,
+    "category": "Setup",
+    "question": "¿Para qué sirve el separador '--' en 'npm init playwright@latest -- ...'?",
+    "options": [
+      "Para comentar el resto de la línea",
+      "Para separar argumentos de npm de los argumentos del instalador de Playwright",
+      "Es un error tipográfico",
+      "Indica que el comando debe ejecutarse como root"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 4,
+    "category": "Setup",
+    "question": "¿Qué función cumple '@typescript-eslint/parser'?",
+    "options": [
+      "Compila el código a binario",
+      "Permite que ESLint entienda la sintaxis de TypeScript",
+      "Ejecuta las pruebas unitarias",
+      "Formatea el código automáticamente"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "category": "Setup",
+    "question": "¿Qué significa la bandera '-D' en 'npm install -D'?",
+    "options": [
+      "Install Direct",
+      "Delete previous versions",
+      "Save as Development dependency (--save-dev)",
+      "Debug mode"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 6,
+    "category": "Arquitectura",
+    "question": "¿Cuál es el objetivo principal del patrón Page Object Model (POM)?",
+    "options": [
+      "Hacer el código más bonito",
+      "Separar la lógica de prueba de la estructura de la página web",
+      "Ejecutar pruebas más rápido",
+      "Usar menos memoria RAM"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 7,
+    "category": "Teoría QA",
+    "question": "¿Qué técnica de prueba se enfoca en probar los extremos de los rangos de entrada?",
+    "options": [
+      "Partición de Equivalencia",
+      "Prueba de Transición de Estados",
+      "Análisis de Valores Límite",
+      "Pruebas Exploratorias"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 8,
+    "category": "Teoría QA",
+    "question": "Si un campo acepta valores del 1 al 100, ¿cuáles son valores límite típicos?",
+    "options": [
+      "10, 50, 90",
+      "0, 1, 100, 101",
+      "-1, 50, 102",
+      "1, 2, 3, 4"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 9,
+    "category": "Playwright Core",
+    "question": "¿Cuál es el comando básico para ejecutar todas las pruebas en Playwright?",
+    "options": [
+      "npm start",
+      "npx playwright test",
+      "node run tests",
+      "playwright run"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 10,
+    "category": "Playwright Core",
+    "question": "¿Cómo ejecutamos las pruebas mostrando el navegador (no headless)?",
+    "options": [
+      "npx playwright test --headed",
+      "npx playwright test --show",
+      "npx playwright test --ui",
+      "npx playwright test --browser"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 11,
+    "category": "Locators",
+    "question": "¿Qué locator es recomendado usar preferentemente por accesibilidad?",
+    "options": [
+      "page.locator('.class')",
+      "page.getByRole()",
+      "page.xpath('//div')",
+      "page.getByTestId()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 12,
+    "category": "Locators",
+    "question": "Si quiero encontrar un botón que dice 'Login', ¿qué locator es el más directo?",
+    "options": [
+      "page.getByRole('button', { name: 'Login' })",
+      "page.locator('button')",
+      "page.getByText('Login')",
+      "page.css('#login')"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 13,
+    "category": "TypeScript",
+    "question": "¿Qué palabra clave se usa en TS/JS para esperar a que una promesa se resuelva?",
+    "options": [
+      "wait",
+      "expect",
+      "await",
+      "pause"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 14,
+    "category": "TypeScript",
+    "question": "Para usar 'await' dentro de una función, ¿cómo debe declararse esa función?",
+    "options": [
+      "function sync name()",
+      "async function name()",
+      "static function name()",
+      "public function name()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 15,
+    "category": "Playwright Actions",
+    "question": "¿Qué método se usa para escribir texto en un input?",
+    "options": [
+      ".type()",
+      ".write()",
+      ".fill()",
+      ".send()"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 16,
+    "category": "Playwright Actions",
+    "question": "¿Cuál es la diferencia principal entre .fill() y .type() (este último deprecado)?",
+    "options": [
+      ".fill() borra el campo primero y es más rápido; .type() simula tecla por tecla.",
+      ".fill() es solo para números.",
+      ".type() es más moderno.",
+      "No hay diferencia."
+    ],
+    "answer": 0
+  },
+  {
+    "id": 17,
+    "category": "Assertions",
+    "question": "¿Cuál es la aserción correcta para verificar que un elemento es visible?",
+    "options": [
+      "expect(locator).toBe(true)",
+      "expect(locator).toBeVisible()",
+      "assert(locator.isVisible())",
+      "expect(locator).exists()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 18,
+    "category": "Assertions",
+    "question": "¿Qué característica tienen las 'Web Assertions' (como toHaveText) en Playwright?",
+    "options": [
+      "Son síncronas",
+      "Hacen auto-retrying (reintentan hasta que pasa o timeout)",
+      "Fallan inmediatamente si no se cumple",
+      "Solo funcionan en Chrome"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 19,
+    "category": "Configuración",
+    "question": "¿En qué archivo se configuran los navegadores a utilizar (projects)?",
+    "options": [
+      "package.json",
+      "tsconfig.json",
+      "playwright.config.ts",
+      "tests/config.ts"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 20,
+    "category": "Debug",
+    "question": "¿Qué comando abre la UI interactiva de Playwright para depurar?",
+    "options": [
+      "npx playwright debug",
+      "npx playwright test --ui",
+      "npx playwright open",
+      "npx playwright test --debug"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 21,
+    "category": "Locators",
+    "question": "¿Cómo seleccionamos un elemento por su texto exacto?",
+    "options": [
+      "page.locator('text=Hola')",
+      "page.getByText('Hola', { exact: true })",
+      "page.find('Hola')",
+      "page.text('Hola')"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 22,
+    "category": "Estructura",
+    "question": "¿Qué función agrupa varios tests bajo un mismo contexto o título?",
+    "options": [
+      "test.group()",
+      "test.describe()",
+      "test.suite()",
+      "test.list()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 23,
+    "category": "Estructura",
+    "question": "¿Qué hook se ejecuta antes de CADA test dentro de un describe?",
+    "options": [
+      "test.beforeAll()",
+      "test.afterEach()",
+      "test.beforeEach()",
+      "test.setup()"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 24,
+    "category": "POM",
+    "question": "En POM, ¿dónde se suelen inicializar los locators?",
+    "options": [
+      "En el método test()",
+      "En el constructor de la clase de la página",
+      "En un archivo JSON externo",
+      "En el archivo playwright.config.ts"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 25,
+    "category": "TypeScript",
+    "question": "¿Qué tipo de dato devuelve 'page.locator(...)'?",
+    "options": [
+      "ElementHandle",
+      "Promise<void>",
+      "Locator",
+      "String"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 26,
+    "category": "Playwright Core",
+    "question": "¿Qué método simula presionar una tecla específica (ej: Enter)?",
+    "options": [
+      ".click('Enter')",
+      ".type('Enter')",
+      ".press('Enter')",
+      ".hit('Enter')"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 27,
+    "category": "Locators",
+    "question": "¿Qué hace 'page.getByPlaceholder('Usuario')'?",
+    "options": [
+      "Busca un elemento con id='Usuario'",
+      "Busca un input con el atributo placeholder='Usuario'",
+      "Busca un texto que diga 'Usuario'",
+      "Busca una imagen llamada 'Usuario'"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 28,
+    "category": "Setup",
+    "question": "¿Qué archivo contiene las dependencias del proyecto y scripts de npm?",
+    "options": [
+      "playwright.config.ts",
+      "package.json",
+      "node_modules",
+      "package-lock.json"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 29,
+    "category": "Teoría QA",
+    "question": "En Partición de Equivalencia, si probamos un valor válido de una partición...",
+    "options": [
+      "Asumimos que el resto de valores de esa partición también funcionan",
+      "Debemos probar todos los demás valores también",
+      "Significa que el software no tiene bugs",
+      "Es una prueba de caja blanca"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 30,
+    "category": "Playwright Actions",
+    "question": "¿Cómo se selecciona una opción en un <select> dropdown?",
+    "options": [
+      ".click(option)",
+      ".selectOption('valor')",
+      ".fill('valor')",
+      ".choose('valor')"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 31,
+    "category": "Assertions",
+    "question": "¿Qué hace 'expect(page).toHaveURL(/dashboard/)'?",
+    "options": [
+      "Verifica que la URL contenga 'dashboard'",
+      "Navega a /dashboard",
+      "Verifica que haya un texto 'dashboard' en la página",
+      "Falla si la URL es /dashboard"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 32,
+    "category": "Configuración",
+    "question": "¿Qué propiedad en playwright.config.ts define la URL base para no repetirla?",
+    "options": [
+      "rootUrl",
+      "baseUrl",
+      "baseURL",
+      "startUrl"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 33,
+    "category": "Playwright Core",
+    "question": "¿Qué es un 'Trace' en Playwright?",
+    "options": [
+      "Un error de consola",
+      "Una grabación detallada de la ejecución (pasos, screenshots, red)",
+      "Un tipo de locator",
+      "Una variable de entorno"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 34,
+    "category": "Locators",
+    "question": "¿Qué locator usarías para un elemento con data-test-id='submit-btn'?",
+    "options": [
+      "page.locator('#submit-btn')",
+      "page.getByTestId('submit-btn')",
+      "page.getByData('submit-btn')",
+      "page.id('submit-btn')"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 35,
+    "category": "TypeScript",
+    "question": "¿Cómo definimos que una propiedad es opcional en una interfaz?",
+    "options": [
+      "prop: string?",
+      "prop?: string",
+      "optional prop: string",
+      "prop: string | undefined"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 36,
+    "category": "Estructura",
+    "question": "¿Cuál es la función principal que importamos de '@playwright/test'?",
+    "options": [
+      "describe",
+      "it",
+      "test",
+      "run"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 37,
+    "category": "Locators",
+    "question": "Si tienes 'page.locator('div').filter({ hasText: 'Producto' })', ¿qué hace?",
+    "options": [
+      "Busca todos los divs y luego filtra solo los que contienen 'Producto'",
+      "Busca un div que se llame Producto",
+      "Busca el texto Producto dentro de un div",
+      "Filtra los productos de la base de datos"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 38,
+    "category": "Setup",
+    "question": "¿Qué carpeta se recomienda añadir al .gitignore?",
+    "options": [
+      "tests/",
+      "node_modules/",
+      "package.json",
+      "src/"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 39,
+    "category": "Playwright Actions",
+    "question": "¿Qué método usarías para verificar un checkbox?",
+    "options": [
+      ".click()",
+      ".check()",
+      ".select()",
+      ".mark()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 40,
+    "category": "Assertions",
+    "question": "¿Qué significa 'Soft Assertion'?",
+    "options": [
+      "Una aserción que no falla el test inmediatamente, permite continuar y reporta el error al final",
+      "Una aserción para software",
+      "Una aserción opcional que no importa si falla",
+      "Una aserción lenta"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 41,
+    "category": "Setup",
+    "question": "¿Qué comando actualiza Playwright a la última versión?",
+    "options": [
+      "npm update",
+      "npm install playwright@latest",
+      "npx playwright install",
+      "npm install -D @playwright/test@latest"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 42,
+    "category": "Configuración",
+    "question": "¿Qué hace 'testDir' en playwright.config.ts?",
+    "options": [
+      "Define dónde se guardan los reportes",
+      "Define la carpeta donde están los archivos de prueba",
+      "Define el directorio temporal",
+      "Define el directorio de screenshots"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 43,
+    "category": "Teoría QA",
+    "question": "¿Qué es un 'Flaky Test'?",
+    "options": [
+      "Un test que falla a veces y pasa otras sin cambios en el código",
+      "Un test de UI",
+      "Un test muy rápido",
+      "Un test mal escrito"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 44,
+    "category": "Playwright Core",
+    "question": "¿Qué navegador usa Playwright por defecto si no se especifica otro?",
+    "options": [
+      "Google Chrome",
+      "Chromium",
+      "Internet Explorer",
+      "Safari"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 45,
+    "category": "Locators",
+    "question": "¿Qué locator usarías para un enlace que dice 'Cerrar Sesión'?",
+    "options": [
+      "page.getByRole('link', { name: 'Cerrar Sesión' })",
+      "page.locator('a')",
+      "page.getByLabel('Cerrar Sesión')",
+      "page.getByAltText('Cerrar Sesión')"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 46,
+    "category": "TypeScript",
+    "question": "¿Qué extensión deben tener los archivos de prueba en nuestro proyecto?",
+    "options": [
+      ".js",
+      ".spec.ts",
+      ".test.java",
+      ".py"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 47,
+    "category": "POM",
+    "question": "En POM, ¿por qué pasamos 'page' al constructor de la clase?",
+    "options": [
+      "Para que la clase tenga acceso a las acciones del navegador en esa página específica",
+      "Es obligatorio por sintaxis de clase",
+      "Para importar librerías",
+      "No es necesario pasarlo"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 48,
+    "category": "Setup",
+    "question": "¿Qué comando instala los navegadores binarios necesarios para Playwright?",
+    "options": [
+      "npm install browsers",
+      "npx playwright install",
+      "apt-get install chrome",
+      "No se instalan, usa los del sistema"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 49,
+    "category": "Assertions",
+    "question": "¿Qué aserción verifica que un elemento NO esté en el DOM?",
+    "options": [
+      "expect(locator).toBeHidden()",
+      "expect(locator).not.toBeAttached()",
+      "expect(locator).toBeNull()",
+      "expect(locator).toBeMissing()"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 50,
+    "category": "Playwright Actions",
+    "question": "¿Cómo simulamos un 'hover' (pasar el mouse por encima)?",
+    "options": [
+      ".hover()",
+      ".mouseOver()",
+      ".focus()",
+      ".move()"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 51,
+    "category": "Setup",
+    "question": "¿Qué comando de npm ejecuta el linter para revisar errores?",
+    "options": [
+      "npm run lint",
+      "npm test",
+      "npm start",
+      "npm check"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 52,
+    "category": "Debug",
+    "question": "¿Qué hace 'page.pause()'?",
+    "options": [
+      "Detiene la ejecución y abre el Inspector de Playwright para depurar",
+      "Cierra el navegador",
+      "Espera 5 segundos",
+      "Falla el test"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 53,
+    "category": "Configuración",
+    "question": "¿Qué significa 'headless: true'?",
+    "options": [
+      "El navegador se ejecuta sin interfaz gráfica (invisible)",
+      "El navegador no tiene barra de título",
+      "El test se ejecuta sin cerebro",
+      "El navegador se ejecuta en modo móvil"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 54,
+    "category": "Locators",
+    "question": "¿Qué locator es ideal para campos de formulario etiquetados?",
+    "options": [
+      "page.getByLabel('Etiqueta')",
+      "page.getByRole('textbox')",
+      "page.locator('input')",
+      "page.css('.input')"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 55,
+    "category": "Playwright Core",
+    "question": "¿Qué es un 'Worker' en Playwright?",
+    "options": [
+      "Un proceso del sistema operativo que ejecuta tests en paralelo",
+      "Un desarrollador que escribe tests",
+      "Un tipo de test manual",
+      "Una librería externa"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 56,
+    "category": "Configuración",
+    "question": "¿Cómo cambiamos el tamaño de la ventana (viewport) en config?",
+    "options": [
+      "use: { viewport: { width: 1280, height: 720 } }",
+      "size: '1280x720'",
+      "window: { w: 1280, h: 720 }",
+      "No se puede cambiar"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 57,
+    "category": "Setup",
+    "question": "¿Qué archivo bloquea las versiones exactas de las dependencias?",
+    "options": [
+      "package.json",
+      "package-lock.json",
+      "versions.lock",
+      "node_lock.json"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 58,
+    "category": "Assertions",
+    "question": "Si quiero verificar que un botón está deshabilitado:",
+    "options": [
+      "expect(locator).toBeDisabled()",
+      "expect(locator).not.toBeEnabled()",
+      "Ambas son válidas",
+      "Ninguna es válida"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 59,
+    "category": "Playwright Core",
+    "question": "¿Qué objeto de Playwright representa una pestaña del navegador?",
+    "options": [
+      "Browser",
+      "Context",
+      "Page",
+      "Tab"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 60,
+    "category": "Playwright Core",
+    "question": "¿Qué objeto representa una sesión de usuario (cookies, storage)?",
+    "options": [
+      "Browser",
+      "BrowserContext",
+      "Page",
+      "Session"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 61,
+    "category": "Locators",
+    "question": "¿Qué es 'chaining locators'?",
+    "options": [
+      "Encadenar métodos para refinar la búsqueda (ej: locator('div').getByRole('button'))",
+      "Usar cadenas de texto",
+      "Unir dos navegadores",
+      "Bloquear localizadores"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 62,
+    "category": "Actions",
+    "question": "¿Cómo subimos un archivo en un input type='file'?",
+    "options": [
+      ".setInputFiles('ruta/archivo.pdf')",
+      ".upload('archivo.pdf')",
+      ".click() y luego controlar el diálogo del SO",
+      ".sendFile()"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 63,
+    "category": "Setup",
+    "question": "¿Qué comando usamos para abrir el reporte HTML generado?",
+    "options": [
+      "npx playwright show-report",
+      "open report.html",
+      "npm run report",
+      "view html"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 64,
+    "category": "TypeScript",
+    "question": "¿Cómo importamos una clase Login desde la carpeta pages?",
+    "options": [
+      "import { Login } from '../pages/Login';",
+      "include Login from pages",
+      "require('../pages/Login')",
+      "using Login"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 65,
+    "category": "Assertions",
+    "question": "Verificar que un texto contiene una subcadena:",
+    "options": [
+      "expect(locator).toContainText('subcadena')",
+      "expect(locator).toHaveText('subcadena')",
+      "expect(locator).toBe('subcadena')",
+      "expect(locator).text('subcadena')"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 66,
+    "category": "Playwright Core",
+    "question": "¿Qué comando permite generar código interactuando con el navegador (Codegen)?",
+    "options": [
+      "npx playwright codegen",
+      "npx playwright generate",
+      "npx playwright record",
+      "npx playwright make"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 67,
+    "category": "Setup",
+    "question": "¿Por qué usamos ESLint en el proyecto?",
+    "options": [
+      "Para compilar el código",
+      "Para encontrar errores de sintaxis y mantener consistencia de estilo",
+      "Para ejecutar los tests más rápido",
+      "Para generar documentación"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 68,
+    "category": "Actions",
+    "question": "¿Qué hace .dblclick()?",
+    "options": [
+      "Doble click",
+      "Click derecho",
+      "Click y mantener",
+      "No existe"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 69,
+    "category": "Locators",
+    "question": "¿Qué hace page.getByAltText('Logo')?",
+    "options": [
+      "Busca un elemento con texto alternativo (alt) 'Logo' (común en imágenes)",
+      "Busca un texto 'Logo'",
+      "Busca un botón 'Logo'",
+      "Busca un link 'Logo'"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 70,
+    "category": "Configuración",
+    "question": "¿Para qué sirve la opción 'trace: \"on-first-retry\"'?",
+    "options": [
+      "Graba el trace solo si el test falla y se reintenta",
+      "Graba siempre",
+      "Nunca graba",
+      "Graba solo el primer test"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 71,
+    "category": "Teoría QA",
+    "question": "Login Exitoso se considera un caso de prueba de:",
+    "options": [
+      "Prioridad Baja",
+      "Criticidad Alta / Smoke Test",
+      "Prueba de carga",
+      "Prueba opcional"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 72,
+    "category": "Setup",
+    "question": "¿Qué carpeta contiene los módulos instalados por npm?",
+    "options": [
+      "src",
+      "bin",
+      "node_modules",
+      "lib"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 73,
+    "category": "Playwright Core",
+    "question": "¿Cómo hacemos una captura de pantalla completa de la página?",
+    "options": [
+      "page.screenshot({ fullPage: true })",
+      "page.capture()",
+      "page.snap()",
+      "page.photo()"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 74,
+    "category": "POM",
+    "question": "¿Es buena práctica poner aserciones (expects) dentro de los Page Objects?",
+    "options": [
+      "Sí, siempre",
+      "Depende, pero generalmente se prefiere tener las aserciones en el test y las acciones en el PO",
+      "No, está prohibido",
+      "Solo aserciones de URL"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 75,
+    "category": "TypeScript",
+    "question": "En TS, ': void' al final de una función significa:",
+    "options": [
+      "La función retorna null",
+      "La función no retorna ningún valor",
+      "La función retorna cualquier cosa",
+      "La función es inválida"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 76,
+    "category": "Locators",
+    "question": "¿Qué locator busca por título (title attribute)?",
+    "options": [
+      "page.getByTitle('... ')",
+      "page.getByAttribute('title', '...')",
+      "page.locator('title=...')",
+      "page.title('...')"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 77,
+    "category": "Configuración",
+    "question": "¿Qué opción en config permite ejecutar tests en paralelo?",
+    "options": [
+      "fullyParallel: true",
+      "parallel: 'always'",
+      "async: true",
+      "threads: 4"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 78,
+    "category": "Actions",
+    "question": "¿Qué tecla simula .press('ArrowDown')?",
+    "options": [
+      "Flecha abajo",
+      "Tecla S",
+      "Page Down",
+      "Enter"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 79,
+    "category": "Locators",
+    "question": "¿Qué es mejor: usar selectores XPath complejos o IDs de test (data-testid)?",
+    "options": [
+      "XPath complejos son mejores",
+      "IDs de test son mejores porque son estables y dedicados a QA",
+      "CSS es lo único que sirve",
+      "No hay diferencia"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 80,
+    "category": "Playwright Core",
+    "question": "¿Qué comando ejecuta solo los tests que contienen 'login' en el nombre?",
+    "options": [
+      "npx playwright test -g 'login'",
+      "npx playwright test --filter 'login'",
+      "npx playwright test login",
+      "Ambas A y C suelen funcionar"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 81,
+    "category": "Setup",
+    "question": "¿Qué archivo .gitignore hace?",
+    "options": [
+      "Lista archivos que Git debe ignorar y no subir al repositorio",
+      "Lista archivos importantes",
+      "Borra archivos",
+      "Configura Git"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 82,
+    "category": "Teoría QA",
+    "question": "Login Exitoso se considera un caso de prueba de:",
+    "options": [
+      "Prioridad Baja",
+      "Criticidad Alta / Smoke Test",
+      "Prueba de carga",
+      "Prueba opcional"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 83,
+    "category": "Actions",
+    "question": "Para hacer drag and drop (arrastrar y soltar):",
+    "options": [
+      "page.dragAndDrop(source, target)",
+      "page.move(source, target)",
+      "page.drag(source).drop(target)",
+      "No se puede"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 84,
+    "category": "Assertions",
+    "question": "expect(value).toBe(1) verifica:",
+    "options": [
+      "Igualdad estricta (valor y tipo)",
+      "Que value existe",
+      "Que value es mayor a 0",
+      "Que value es un número"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 85,
+    "category": "Estructura",
+    "question": "test.skip() sirve para:",
+    "options": [
+      "Saltar la ejecución de un test (marcarlo como skipped)",
+      "Fallar el test intencionalmente",
+      "Repetir el test",
+      "Ejecutarlo al final"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 86,
+    "category": "Setup",
+    "question": "¿Qué indica el archivo package-lock.json?",
+    "options": [
+      "El árbol exacto de dependencias instaladas para replicar el entorno",
+      "Contraseñas encriptadas",
+      "Configuración de bloqueo de pantalla",
+      "Nada importante"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 87,
+    "category": "Playwright Core",
+    "question": "Para manejar una nueva pestaña que se abre tras un click, usamos:",
+    "options": [
+      "const [newPage] = await Promise.all([context.waitForEvent('page'), locator.click()])",
+      "page.switchToTab(2)",
+      "page.nextPage()",
+      "No se puede manejar múltiples pestañas"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 88,
+    "category": "Locators",
+    "question": "page.locator('button:has-text(\"Guardar\")') es un ejemplo de:",
+    "options": [
+      "Pseudo-clase de CSS específica de Playwright",
+      "XPath puro",
+      "Error de sintaxis",
+      "JavaScript"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 89,
+    "category": "TypeScript",
+    "question": "En TS, 'readonly' en una propiedad de clase significa:",
+    "options": [
+      "La propiedad no se puede modificar después de la inicialización",
+      "La propiedad es invisible",
+      "La propiedad solo se puede leer en la base de datos",
+      "Es una constante global"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 90,
+    "category": "Configuración",
+    "question": "La opción 'retries: 2' en config significa:",
+    "options": [
+      "Si un test falla, se reintentará hasta 2 veces más",
+      "Se ejecutarán todos los tests 2 veces",
+      "Se usan 2 hilos",
+      "Se espera 2 segundos"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 91,
+    "category": "Assertions",
+    "question": "expect(locator).toHaveCount(3) verifica:",
+    "options": [
+      "Que hay exactamente 3 elementos que coinciden con el locator",
+      "Que el elemento tiene el valor 3",
+      "Que el elemento aparece 3 veces en el log",
+      "Que el test dura 3 segundos"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 92,
+    "category": "Setup",
+    "question": "¿Qué es Playwright?",
+    "options": [
+      "Un framework de automatización E2E moderno para aplicaciones web",
+      "Un lenguaje de programación",
+      "Una base de datos",
+      "Un editor de texto"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 93,
+    "category": "Actions",
+    "question": "page.goto('url') devuelve una promesa que resuelve cuando:",
+    "options": [
+      "Se alcanza el evento 'load' (carga completa) por defecto",
+      "Inmediatamente",
+      "Cuando se renderiza el primer pixel",
+      "A los 30 segundos"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 94,
+    "category": "Locators",
+    "question": "¿Qué es el Shadow DOM y puede Playwright acceder a él?",
+    "options": [
+      "Una estructura DOM encapsulada; Playwright accede automáticamente (piercing)",
+      "Una zona oscura de la web; Playwright no puede entrar",
+      "Un modo de video",
+      "Un virus"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 95,
+    "category": "Teoría QA",
+    "question": "¿Cuál es la diferencia entre Smoke Test y Regression Test?",
+    "options": [
+      "Smoke verifica funcionalidades críticas básicas; Regresión verifica que cambios no rompieron nada existente",
+      "Son lo mismo",
+      "Smoke es manual, Regresión es automático",
+      "Smoke es con fuego"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 96,
+    "category": "Playwright Core",
+    "question": "Para tomar un video de la ejecución, configuramos en 'use':",
+    "options": [
+      "video: 'on' o 'retain-on-failure'",
+      "record: true",
+      "camera: 'on'",
+      "movie: 'start'"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 97,
+    "category": "Actions",
+    "question": "Si un elemento está cubierto por otro y .click() falla, podemos forzarlo con:",
+    "options": [
+      ".click({ force: true })",
+      ".click({ hard: true })",
+      ".click({ ignore: true })",
+      "No se puede"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 98,
+    "category": "Assertions",
+    "question": "¿Cómo negamos una aserción? Ej: esperar que NO sea visible.",
+    "options": [
+      "expect(locator).not.toBeVisible()",
+      "expect(locator).toBeVisible(false)",
+      "expect(locator).isNotVisible()",
+      "!expect(locator).toBeVisible()"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 99,
+    "category": "TypeScript",
+    "question": "En POM, 'readonly page: Page;' define:",
+    "options": [
+      "Una propiedad de clase que almacenará el objeto Page de Playwright",
+      "Una página de solo lectura en el navegador",
+      "Una constante numérica",
+      "Un método"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 100,
+    "category": "Configuración",
+    "question": "¿Cuál es el timeout predeterminado para un test en Playwright (test timeout)?",
+    "options": [
+      "5 segundos",
+      "10 segundos",
+      "30 segundos",
+      "No tiene límite"
+    ],
+    "answer": 2
+  }
+]
